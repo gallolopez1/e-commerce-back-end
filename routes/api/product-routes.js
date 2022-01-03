@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Product, Category, Tag, ProductTag } = require("../../models");
+const { Product, Product, Tag, ProductTag, Category } = require("../../models");
 
 // The `/api/products` endpoint
 
@@ -41,7 +41,7 @@ router.get("/:id", (req, res) => {
   })
     .then((dbProductData) => {
       if (!dbProductData) {
-        res.status(404).json({ message: "No category found with this id" });
+        res.status(404).json({ message: "No Product found with this id" });
         return;
       }
       res.json(dbProductData);
@@ -128,14 +128,14 @@ router.put("/:id", (req, res) => {
 
 router.delete("/:id", (req, res) => {
   // delete one product by its `id` value
-  Category.destroy({
+  Product.destroy({
     where: {
       id: req.params.id,
     },
   })
     .then((dbProductData) => {
       if (!dbProductData) {
-        res.status(404).json({ message: "No category found with this id" });
+        res.status(404).json({ message: "No Product found with this id" });
         return;
       }
       res.json(dbProductData);
