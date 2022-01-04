@@ -14,7 +14,7 @@ Build the back end for an e-commerce site. You’ll take a working Express.js AP
 ### App Usage
 [Recording Link](https://watch.screencastify.com/v/iB1I0XRVonbM4B8YUkXw)
 
-![App Usage Recording](./assets/team-profile-generator.gif)
+![App Usage Recording](./assets/e-commerce-walkthrough.gif)
 
 ## User Story
 
